@@ -9,26 +9,16 @@ public class HitungBalok28 {
 
         int p, l, t, L, vol;
 
-        System.out.println("Masukkan panjang");
+        System.out.print("Masukkan panjang: ");
         p = input.nextInt();
-        System.out.println("Masukkan lebar");
+        System.out.print("Masukkan lebar: ");
         l = input.nextInt();
-        System.out.println("Masukkan tinggi");
+        System.out.print("Masukkan tinggi: ");
         t = input.nextInt();
-        L = hitungLuas(p, l);
+        L = p * l;
         System.out.println("Luas persegi panjang adalah: " + L);
-        vol = hitungVolume(t, p, l);
+        vol = p * l * t;
         System.out.println("Volume balok adalah: " + vol);
         input.close();
-    }
-
-    public static int hitungLuas(int pjg, int lb) {
-        int luas = pjg * lb;
-        return luas;
-    }
-
-    public static int hitungVolume(int tinggi, int a, int b) {
-        int volume = hitungLuas(a, b) * tinggi;
-        return volume;
     }
 }
