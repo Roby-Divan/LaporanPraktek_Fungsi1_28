@@ -1,21 +1,26 @@
 
 public class PengunjungCafe28 {
 
-    static void daftarPengunjung(int nomorMeja, String... namaPengunjung) {
+    static int hitungTotalBelanja(int... harga) {
 
-        System.out.println("Nomor meja: " + nomorMeja);
-        System.out.println("Daftar nama pengunjung:");
+        int total = 0;
 
-        for (String nama : namaPengunjung) {
-            System.out.println("- " + nama);
+        for (int nilai : harga) {
+            total += nilai;
         }
+
+        return total;
     }
 
     public static void main(String[] args) {
 
-        daftarPengunjung(1, "Ali", "Budi", "Citra");
-        daftarPengunjung(2, "Andi");
-        daftarPengunjung(3, "Doni", "Eti", "Fahmi");
+        int total1 = hitungTotalBelanja(10000);
+        int total2 = hitungTotalBelanja(10000, 15000, 20000);
+        int total3 = hitungTotalBelanja(10000, 15000, 20000, 5000, 10000);
+
+        System.out.println("Total 1 argumen: Rp " + total1);
+        System.out.println("Total 3 argumen: Rp " + total2);
+        System.out.println("Total 5 argumen: Rp " + total3);
 
     }
 }
