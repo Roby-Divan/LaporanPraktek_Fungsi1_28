@@ -20,7 +20,6 @@ public class Kafe2_28 {
         int pilihMenu = sc.nextInt();
         System.out.println("Masukkan jumlah item yang ingin Anda pesan");
         int banyakItem = sc.nextInt();
-
         int totalBayar = hitungTotalHarga28(pilihMenu, banyakItem);
         System.out.println("Total harga untuk pesanan Anda: Rp " + totalBayar);
         sc.close();
