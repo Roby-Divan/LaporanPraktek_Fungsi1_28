@@ -10,12 +10,33 @@ public class Kafe2_28 {
         return hargaTotal;
     }
 
+    public static int hitungDiskon(int total, String kodePromo, boolean isMember) {
+
+        int persenDiskon = 0;
+
+        if (kodePromo.equalsIgnoreCase("DISKON50")) {
+            persenDiskon = 50;
+        } else if (kodePromo.equalsIgnoreCase("DISKON30")) {
+            persenDiskon = 30;
+        } else {
+            System.out.println("Kode promo invalid");
+        }
+
+        if (isMember) {
+            persenDiskon += 10;
+        }
+        int nominalDiskon = (total * persenDiskon) / 100;
+        return nominalDiskon;
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
+        int totalBayar = 0;
         int pilihMenu;
         int banyakItem;
-        int totalBayar = 0;
+
+        boolean isMember = true;
 
         System.out.println("=== MENU RESTO KAFE ===");
         System.out.println("1. Kopi Hitam - Rp15.000");
@@ -46,7 +67,15 @@ public class Kafe2_28 {
             totalBayar += subtotal;
             System.out.println("Subtotal: Rp " + subtotal);
         } while (true);
-        System.out.println("\nTotal keseluruhan: Rp " + totalBayar);
+        sc.nextLine();
+        System.out.print("\nMasukkan kode promo: ");
+        String kodePromo = sc.nextLine();
+        int diskon = hitungDiskon(totalBayar, kodePromo, isMember);
+        int totalAkhir = totalBayar - diskon;
+        System.out.println("== STRUK PEMBAYARAN ==");
+        System.out.println("Total harga   : Rp " + totalBayar);
+        System.out.println("Besar diskon  : Rp " + diskon);
+        System.out.println("Total dibayar : Rp " + totalAkhir);
 
         sc.close();
     }
