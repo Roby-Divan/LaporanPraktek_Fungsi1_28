@@ -1,19 +1,21 @@
 
 public class PengunjungCafe28 {
 
-    static void daftarPengunjung(String... namaPengunjung) {
+    static void daftarPengunjung(int nomorMeja, String... namaPengunjung) {
 
+        System.out.println("Nomor meja: " + nomorMeja);
         System.out.println("Daftar nama pengunjung:");
 
-        for (int i = 0; i < namaPengunjung.length; i++) {
-            System.out.println("- " + namaPengunjung[i]);
+        for (String nama : namaPengunjung) {
+            System.out.println("- " + nama);
         }
     }
 
     public static void main(String[] args) {
 
-        String[] tamu = {"Ali", "Budi", "Citra"};
+        daftarPengunjung(1, "Ali", "Budi", "Citra");
+        daftarPengunjung(2, "Andi");
+        daftarPengunjung(3, "Doni", "Eti", "Fahmi");
 
-        daftarPengunjung(tamu);
     }
 }
