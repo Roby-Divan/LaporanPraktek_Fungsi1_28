@@ -1,4 +1,3 @@
-
 public class Kafe1_28 {
     public static void menu() {
         System.out.println("== MENU RESTO KAFE ==");
@@ -14,6 +13,8 @@ public class Kafe1_28 {
         System.out.println("Jumlah menu: " + jumlah);
     }
     public static void main(String[] args) {
+        menu();
+        menu();
         menu();
     }
     public static int jumlahMenu() {
