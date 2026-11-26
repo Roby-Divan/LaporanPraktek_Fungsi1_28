@@ -1,5 +1,6 @@
 
 public class Kafe1_28 {
+    public static void menu() {
 
     public void menu() {
         System.out.println("== MENU RESTO KAFE ==");
