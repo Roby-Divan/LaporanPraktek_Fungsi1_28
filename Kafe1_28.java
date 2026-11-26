@@ -10,8 +10,13 @@ public class Kafe1_28 {
         System.out.println("6. Mie Goreng - Rp. 10.000");
         System.out.println("======================");
         System.out.println("Silahkan pilih menu yang anda inginkan");
+        int jumlah =jumlahMenu();
+        System.out.println("Jumlah menu: " + jumlah);
     }
     public static void main(String[] args) {
         menu();
+    }
+    public static int jumlahMenu() {
+        return 6;
     }
 }
