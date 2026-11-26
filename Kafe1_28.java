@@ -2,6 +2,8 @@
 public class Kafe1_28 {
     public static void main(String[] args) {
         menu("Andi", true);
+        menu();
+        menu(true, andi);
     }
     public static void menu(String namaPelanggan, boolean isMember) {
         if (isMember) {
