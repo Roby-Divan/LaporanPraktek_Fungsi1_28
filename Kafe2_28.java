@@ -7,20 +7,11 @@ public class Kafe2_28 {
         int hargaTotal = hargaItems[pilihanMenu - 1] * banyakItem;
         return hargaTotal;
     }
-    public static void menu(String namaPelanggan, boolean isMember, int jamKunjung) {
-        System.out.println("Selamat datang, " + namaPelanggan);
-
-        if (isMember) {
-            System.out.println("Anda adalah member!");
-        }
-        if (jamKunjung >= 14 && jamKunjung < 16) {
-            System.out.println("Happy Hour!");
-        }
-    }
 
     public static void main(String[] args) {
-        menu("Andi", true, 14);
-        int totalBayar = hitungTotalHarga28(1, 2);
-        System.out.println("Total harga: Rp " + totalBayar);
+
+        hitungTotalHarga28(1, 2);
+
+        System.out.println("Program berhasil dijalankan");
     }
 }
