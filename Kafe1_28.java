@@ -15,6 +15,8 @@ public class Kafe1_28 {
     }
     public static void main(String[] args) {
         menu();
+        menu();
+        menu();
     }
     public static int jumlahMenu() {
         return 6;
